@@ -1,0 +1,231 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  /* margin-top: 5rem; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.site-header {
+  margin-bottom: 5rem;
+}
+
+.bg-steel {
+  background-color: #000000;
+}
+
+.nav-item {
+  font-size: 20px;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+}
+
+#webname {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+}
+
+#sub-webname {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.home-sec2 {
+  height: 400px;
+  background-color: black;
+}
+
+#bottom-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  color: black;
+  font-weight: bold;
+}
+
+#sidebar-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cat-a {
+  color: #585858;
+  /* font-weight: bold; */
+  font-size: 18px;
+  font-family: 'EB Garamond', serif;
+}
+
+.cat-a:hover{
+  color: blue;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  padding: 0 0 0 0;
+}
+
+/* .site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+} */
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+/* .site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+} */
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.home-posts {
+  /* margin-top: 20px; */
+  width: 710px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+/* scrolling picture in the home page*/
+
+#focus {
+  width: 1110px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#focus ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#focus ul li{
+  float: left;
+  width: 1110px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  background:#000;
+}
+
+#focus ul li div{
+  position: absolute;
+  overflow: hidden;
+}
+
+#focus .btn{
+  position: absolute;
+  width: 180px;
+  height: 30px;
+  bottom: 90px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  right: 10px;
+  text-align: right;
+}
+
+#focus .btn span{
+  display: inline-block;
+  width: 20px;
+  height: 5px;
+  margin-left: 10px;
+  background:rgb(0, 0, 0);
+}
+
+#focus .preNext{
+  width: 45px;
+  height: 100px;
+  position: absolute;
+  top: 90px;
+  background: url('images/sprite.png') no-repeat 0 0;
+}
+
+#focus .pre{
+  left: 0;
+}
+
+#focus .next{
+  right: 0;
+  background-position: right top;
+}
+
+#focus ul li .slideother{
+  position: absolute;
+  left: 15px;
+  top: 280px;
+  width: 720px;
+  height: 80px; 
+  display: inline-block;
+}
+
+#focus ul li .slideother .h12{
+  font-size: 20px;
+  color:#FFF;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+#focus ul li .slideother a{
+  position: absolute;
+  top: 35px;
+  color:#8B8B8B;
+  text-decoration: none;
+}

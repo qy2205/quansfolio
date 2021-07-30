@@ -1,0 +1,15 @@
+wtforms
+sqlalchemy
+flask
+flask-sqlalchemy
+flask-bcrypt
+flask-login
+flask-wtf
+flask-markdown
+flask_simplemde
+email_validator
+Pillow
+requests
+pytest
+selenium
+lorem-text
