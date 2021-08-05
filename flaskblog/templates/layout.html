@@ -10,10 +10,9 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
@@ -71,14 +70,14 @@
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-4", id = 'bottom-1'>
-          <p>Site Map</p>
-          <p>Home</p>
-          <p>Contact</p>
-          <p>About</p>
-          <p>Posts</p>
+          <p class = "bottom-title">Site Map</p>
+          <p><a class = "bottom-a" href = "/">Home</a></p>
+          <p><a class = "bottom-a" href = "{{ url_for('about') }}">About</a></p>
+          <p><a class = "bottom-a" href="{{ url_for('posts') }}">Posts</a></p>
         </div>
         <div class="col-md-4", id = 'bottom-2'>
-          <p>Stay Connected</p>
+          <p class = "bottom-title">Stay Connected</p>
+          <p><a class = "bottom-a" href = "https://www.linkedin.com/in/qy2205/">LinkedIn</a></p>
         </div>
         <div class="col-md-4", id = 'bottom-3'>
           <a class="navbar-brand mr-4" href="/" id = "bottom-logo">Quansfolio</a>

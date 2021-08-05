@@ -3,42 +3,53 @@
 
 <main role="main" class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <article class="media content-section">
-        <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+        <!-- <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}"> -->
         <div class="media-body">
-        
+
+          {% if post.author == current_user %}
+            <div>
+              <a id="update" class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_post', post_id=post.id) }}">Update</a>
+              <button id="delete" type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+            </div>
+          {% endif %}
+
           <div class="article-metadata">
-          
-            <a class="mr-2" href="#">{{ post.author.username }}</a>
-            <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
-            
-            {% if post.author == current_user %}
-              <div>
-                <a id="update" class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_post', post_id=post.id) }}">Update</a>
-                <button id="delete" type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
-              </div>
-            {% endif %}
-            
+            <a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a>
+          </div>
+
+          <div class="article-metadata">
+            <p class="author" href="#">
+              Written by <b>{{ post.author.username }}</b> on <b>{{ post.date_posted.strftime('%Y-%m-%d') }}</b>
+              &nbsp;
+              <small class="text-muted">{{ post.tag }}</small>
+              {% if post.tag2 %}
+              <small class="text-muted">{{ post.tag2 }} </small>
+              {% endif  %}
+              {% if post.tag3 %}
+              <small class="text-muted">{{ post.tag3 }}</small>
+              {% endif  %}
+            </p>
           </div>
           
-          <h2 class="article-title">{{ post.title }}</h2>
-          <h2 class="article-title">{{ post.tag }}</h2>
-          {% if post.content_type == 'plain' %}
-          <p class="article-content">{{ post.content }}</p>
-          {% elif post.content_type == 'html' %}
-          <p class="article-content">{{ post.content | safe }}</p>
-          {% elif post.content_type == 'markdown' %}
-          <p class="article-content">{{ post.content | markdown }}</p>
-          {% endif  %}
-          
+          <div>
+            {% if post.content_type == 'plain' %}
+            <p class="article-content">{{ post.content }}</p>
+            {% elif post.content_type == 'html' %}
+            <p class="article-content">{{ post.content | safe }}</p>
+            {% elif post.content_type == 'markdown' %}
+            <p class="article-content">{{ post.content | markdown }}</p>
+            {% endif  %}
+          </div>
         </div>
       </article>
+
       <div class="content-section">
-        <h4>Comments</h4>
+        <p class = "article-title">Comments</p>
         {% if current_user.is_authenticated %}
         <div class="media">
-          <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+          <!-- <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}"> -->
           <div class="media-body">
             <form method="POST" action="">
               <div class="article-metadata">
@@ -68,9 +79,10 @@
           </div>
         </div>
         {% endif %}
+
         {% for comment in post.comments %}
           <div class="media">
-            <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + comment.author.image_file) }}">
+            <!-- <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + comment.author.image_file) }}"> -->
             <div class="media-body">
               <div class="article-metadata">
                 <div class="container">
@@ -86,6 +98,7 @@
             </div>
           </div>
         {% endfor %}
+
       </div>
       <!-- Modal -->
       <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -97,9 +110,9 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-              <div class="modal-body">
-                <p>Are you sure that you want to delete the post and all its comments?</p>
-              </div>
+            <div class="modal-body">
+              <p>Are you sure that you want to delete the post and all its comments?</p>
+            </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <form action="{{ url_for('delete_post', post_id=post.id) }}" method="POST">
@@ -111,7 +124,7 @@
       </div>
     </div>
 
-    <div class="col-md-4" id = 'sidebar'>
+    <!-- <div class="col-md-4" id = 'sidebar'>
       <div class="content-section">
         <p id = "sidebar-name">Categories</p>
         <ul class="list-group">
@@ -127,7 +140,7 @@
         {% endfor %}
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 </main>
 {% endblock content %}

@@ -1,8 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
 
-
-
 <main role="main" class="container">
   <div class="row">
 
@@ -14,7 +12,7 @@
               <img class = "home-image" src="{{ url_for('static', filename='images/home/' + post.id|string + '.jpg') }}" />
               <div class= "slideother">
                 <div class="h12">{{ post.title }}</div>
-                <a href="{{ url_for('post', post_id=post.id) }}">Read more ...</a>
+                <a href="{{ url_for('post', post_id=post.id) }}" class = "article-content">Read more ...</a>
               </div>
             </li>
           {% endfor %}
@@ -28,18 +26,25 @@
         <article class="media content-section">
           <!-- <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}"> -->
           <div class="media-body">
+
             <div class="article-metadata">
               <a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a>
-              <a class="mr-2" href="#">{{ post.author.username }}</a>
-              <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
-              <small class="text-muted">{{ post.tag }}</small>
-              {% if post.tag2 %}
-              <small class="text-muted">{{ post.tag2 }}</small>
-              {% endif  %}
-              {% if post.tag3 %}
-              <small class="text-muted">{{ post.tag3 }}</small>
-              {% endif  %}
             </div>
+
+            <div class="article-metadata">
+              <p class="author" href="#">
+                Written by <b>{{ post.author.username }}</b> on <b>{{ post.date_posted.strftime('%Y-%m-%d') }}</b>
+                &nbsp;
+                <small class="text-muted">{{ post.tag }}</small>
+                {% if post.tag2 %}
+                <small class="text-muted">{{ post.tag2 }} </small>
+                {% endif  %}
+                {% if post.tag3 %}
+                <small class="text-muted">{{ post.tag3 }}</small>
+                {% endif  %}
+              </p>
+            </div>
+            
             <!-- <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2> -->
             {% if post.content_type == 'plain' %}
             <p class="article-content">{{ post.content | safe | striptags | truncate(400) }}</p>
@@ -66,7 +71,7 @@
         <p id = "sidebar-name">Recent Posts</p>
         <ul class="list-group">
         {% for post in recent_posts %}
-          <a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a>
+          <a class="cat-a" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a>
         {% endfor %}
         </ul>
       </div>
@@ -74,11 +79,5 @@
 
   </div>
 </main>
-
-
-
-
-
-
 
 {% endblock content %}
