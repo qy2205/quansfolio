@@ -10,7 +10,7 @@ from sqlalchemy import or_
 
 @app.route("/")
 def home():
-    tag_posts = Post.query.filter_by(tag = 'home')
+    tag_posts = Post.query.filter((Post.tag == 'home') | (Post.tag == 'Home'))
     unique_tags = Post.query.with_entities(Post.tag).distinct()
     unique_tags = [each[0] for each in unique_tags]
     posts = Post.query.order_by(Post.date_posted.desc()).limit(5).all()
@@ -221,6 +221,9 @@ def update_post(post_id):
         post_to_update.title = form.title.data
         post_to_update.content = form.content.data
         post_to_update.content_type = form.content_type.data
+        post_to_update.tag = form.tag.data
+        post_to_update.tag2 = form.tag2.data
+        post_to_update.tag3 = form.tag3.data
         try:
             db.session.commit()
             flash('Your post has been updated!', 'success')
@@ -234,6 +237,9 @@ def update_post(post_id):
         form.title.data = post_to_update.title
         form.content.data = post_to_update.content
         form.content_type.data = post_to_update.content_type
+        form.tag.data = post_to_update.tag
+        form.tag2.data = post_to_update.tag2
+        form.tag3.data = post_to_update.tag3
     return render_template('create_post.html',
                            title='Update Post',
                            form=form,
