@@ -1,5 +1,5 @@
 import argparse
-from load_database import reload_database
+# from load_database import reload_database
 from flaskblog import app
 
 if __name__ == '__main__':
@@ -11,8 +11,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     # reset db before running the application
-    if args.reset:
-        reload_database()
+    # if args.reset:
+    #     reload_database()
         
     # app.run(debug=args.debug, port=args.port, host=args.host)
     app.run(debug=True, port=args.port, host=args.host)

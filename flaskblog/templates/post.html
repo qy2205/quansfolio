@@ -33,9 +33,11 @@
             </p>
           </div>
           
-          <div>
+          <div class="container">
             {% if post.content_type == 'plain' %}
-            <p class="article-content">{{ post.content }}</p>
+            <!-- <p class="article-content"> -->
+              {% include post.content %}
+            <!-- </p> -->
             {% elif post.content_type == 'html' %}
             <p class="article-content">{{ post.content | safe }}</p>
             {% elif post.content_type == 'markdown' %}
