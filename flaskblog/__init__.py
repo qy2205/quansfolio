@@ -8,7 +8,6 @@ from flaskext.markdown import Markdown
 from sqlalchemy import event
 from flask_simplemde import SimpleMDE
 
-
 # configuring the logging
 # for more info, check:
 # https://docs.python.org/3.8/howto/logging.html
