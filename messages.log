@@ -20642,3 +20642,28 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint fail
 [2021-12-27 11:18:21,446] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/images/home/6.jpg HTTP/1.1[0m" 304 -
 [2021-12-27 11:18:21,447] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/images/home/5.jpg HTTP/1.1[0m" 304 -
 [2021-12-27 11:18:21,763] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/images/sprite.png HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:49,428] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\__pycache__\\load_database.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,437] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\__pycache__\\load_database.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,437] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\__pycache__\\load_database.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,439] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__init__.py', reloading
+[2021-12-27 11:18:49,442] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__init__.py', reloading
+[2021-12-27 11:18:49,443] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__init__.py', reloading
+[2021-12-27 11:18:49,444] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\__init__.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,472] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\__init__.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,472] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\__init__.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,473] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\forms.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,481] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\forms.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,481] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\forms.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,481] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\models.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,485] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\models.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,485] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\models.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,485] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\routes.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,500] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\routes.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,501] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\routes.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,502] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\routesapi.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,504] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\routesapi.cpython-38.pyc', reloading
+[2021-12-27 11:18:49,504] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'Y:\\GithubRepo\\quansfolio\\flaskblog\\__pycache__\\routesapi.cpython-38.pyc', reloading
+[2021-12-27 11:18:51,105] [INFO] [werkzeug] [_internal:113] -  * Restarting with windowsapi reloader
+[2021-12-27 11:18:51,948] [WARNING] [werkzeug] [_internal:113] -  * Debugger is active!
+[2021-12-27 11:18:51,964] [INFO] [werkzeug] [_internal:113] -  * Debugger PIN: 176-112-989
+[2021-12-27 11:18:51,979] [INFO] [werkzeug] [_internal:113] -  * Running on http://localhost:5000/ (Press CTRL+C to quit)
