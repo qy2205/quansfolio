@@ -20541,3 +20541,104 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint fail
 [2021-08-10 23:58:16,558] [WARNING] [werkzeug] [_internal:113] -  * Debugger is active!
 [2021-08-10 23:58:16,564] [INFO] [werkzeug] [_internal:113] -  * Debugger PIN: 180-264-961
 [2021-08-10 23:58:16,581] [INFO] [werkzeug] [_internal:113] -  * Running on http://localhost:5000/ (Press CTRL+C to quit)
+[2021-12-27 11:06:25,664] [INFO] [werkzeug] [_internal:113] -  * Restarting with windowsapi reloader
+[2021-12-27 11:06:26,389] [WARNING] [werkzeug] [_internal:113] -  * Debugger is active!
+[2021-12-27 11:06:26,389] [INFO] [werkzeug] [_internal:113] -  * Debugger PIN: 176-112-989
+[2021-12-27 11:06:26,405] [INFO] [werkzeug] [_internal:113] -  * Running on http://localhost:5000/ (Press CTRL+C to quit)
+[2021-12-27 11:06:34,768] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'X:\\Anaconda\\Lib\\encodings\\__pycache__\\unicode_escape.cpython-38.pyc', reloading
+[2021-12-27 11:06:34,801] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:34] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:34,801] [INFO] [werkzeug] [_internal:113] -  * Detected change in 'X:\\Anaconda\\Lib\\site-packages\\markupsafe\\__pycache__\\_constants.cpython-38.pyc', reloading
+[2021-12-27 11:06:34,849] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:34] "[37mGET /static/main.css HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:34,946] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:34] "[37mGET /static/colorful.css HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:35,158] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:35] "[37mGET /static/notebook.css HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:35,499] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:35] "[37mGET /static/images/home/3.jpg HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:35,504] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:35] "[37mGET /static/images/home/4.jpg HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:35,508] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:35] "[37mGET /static/images/home/5.jpg HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:35,517] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:35] "[37mGET /static/images/home/6.jpg HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:35,527] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:35] "[37mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:35,903] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:35] "[37mGET /static/js/slides.js HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:36,233] [INFO] [werkzeug] [_internal:113] -  * Restarting with windowsapi reloader
+[2021-12-27 11:06:36,987] [WARNING] [werkzeug] [_internal:113] -  * Debugger is active!
+[2021-12-27 11:06:36,993] [INFO] [werkzeug] [_internal:113] -  * Debugger PIN: 176-112-989
+[2021-12-27 11:06:37,008] [INFO] [werkzeug] [_internal:113] -  * Running on http://localhost:5000/ (Press CTRL+C to quit)
+[2021-12-27 11:06:37,275] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:37] "[37mGET /static/images/sprite.png HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:37,508] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2021-12-27 11:06:38,508] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:38] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:38,769] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:38] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:38,879] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:38] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:38,880] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:38] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:39,200] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:39] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:39,200] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:39] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:39,202] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:39] "[36mGET /static/images/home/4.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:39,203] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:39] "[36mGET /static/images/home/5.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:39,203] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:39] "[36mGET /static/images/home/3.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:39,204] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:39] "[36mGET /static/images/home/6.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:39,543] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:39] "[36mGET /static/images/sprite.png HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:39,900] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:39] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:40,189] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:40,266] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:40,266] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:40,586] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:40,587] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/images/home/5.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:40,589] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/images/home/3.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:40,589] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:40,590] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/images/home/4.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:40,591] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:40] "[36mGET /static/images/home/6.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:41,172] [DEBUG] [flaskblog] [routes:29] - index without searching returned 6 posts
+[2021-12-27 11:06:41,190] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:41] "[37mGET /posts HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:41,222] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:41] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:41,430] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:41] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:41,527] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:41] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:41,528] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:41] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:41,529] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:41] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:42,352] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:42] "[37mGET /about HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:42,386] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:42] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:42,593] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:42] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:42,688] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:42] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:42,690] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:42] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:42,690] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:42] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:47,427] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:47] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-12-27 11:06:47,455] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:47] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:47,673] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:47] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:47,768] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:47] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:47,990] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:47] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:48,088] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:48] "[36mGET /static/images/home/3.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:48,090] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:48] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:48,091] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:48] "[36mGET /static/images/home/4.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:48,092] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:48] "[36mGET /static/images/home/5.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:06:48,093] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:06:48] "[36mGET /static/images/home/6.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,196] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-12-27 11:18:03,225] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,428] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,532] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,748] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,858] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/images/home/3.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,858] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/images/home/5.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,859] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,859] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/images/home/4.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:03,861] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:03] "[36mGET /static/images/home/6.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:04,185] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:04] "[36mGET /static/images/sprite.png HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:17,597] [DEBUG] [flaskblog] [routes:29] - index without searching returned 6 posts
+[2021-12-27 11:18:17,604] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:17] "[37mGET /posts HTTP/1.1[0m" 200 -
+[2021-12-27 11:18:17,897] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:17] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:17,941] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:17] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:17,942] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:17] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:17,942] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:17] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:17,943] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:17] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:18,906] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:18] "[37mGET /about HTTP/1.1[0m" 200 -
+[2021-12-27 11:18:18,941] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:18] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:19,173] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:19] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:19,252] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:19] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:19,253] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:19] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:19,253] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:19] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:20,767] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:20] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-12-27 11:18:20,794] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:20] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,011] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/colorful.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,100] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/notebook.css HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,325] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/js/jquery-1.7.2.min.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,435] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/js/slides.js HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,435] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/images/home/3.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,441] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/images/home/4.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,446] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/images/home/6.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,447] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/images/home/5.jpg HTTP/1.1[0m" 304 -
+[2021-12-27 11:18:21,763] [INFO] [werkzeug] [_internal:113] - 127.0.0.1 - - [27/Dec/2021 11:18:21] "[36mGET /static/images/sprite.png HTTP/1.1[0m" 304 -
