@@ -13,15 +13,20 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500&family=PT+Serif&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='colorful.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='notebook.css') }}">
 
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
     {% if title %}
-        <title>Flask Blog - {{ title }}</title>
+        <title>Quansfolio - {{ title }}</title>
     {% else %}
-        <title>Flask Blog</title>
+        <title>Quansfolio</title>
     {% endif %}
     
     {{ simplemde.css }}
@@ -43,15 +48,23 @@
             <div class="navbar-nav">
               {% if current_user.is_authenticated %}
                 <a id="home" class="nav-item nav-link" href="/">Home</a>
+                <a id="about" class="nav-item nav-link" href="{{ url_for('about') }}">Curriculum</a>
                 <a id="home" class="nav-item nav-link" href="{{ url_for('posts') }}">Posts</a>
-                <a id="about" class="nav-item nav-link" href="{{ url_for('about') }}">About Me</a>
+                <a id="home" class="nav-item nav-link" href="/">Projects</a>
+                <a id="home" class="nav-item nav-link" href="/">Life</a>
+                <a id="home" class="nav-item nav-link" href="/">Categories</a>
+                <a id="home" class="nav-item nav-link" href="/">FAQs</a>
                 <a id="new-post" class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
                 <a id="account" class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
                 <a id="logout" class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
               {% else %}
                 <a id="home" class="nav-item nav-link" href="/">Home</a>
+                <a id="about" class="nav-item nav-link" href="{{ url_for('about') }}">Curriculum</a>
                 <a id="home" class="nav-item nav-link" href="{{ url_for('posts') }}">Posts</a>
-                <a id="about" class="nav-item nav-link" href="{{ url_for('about') }}">About Me</a>
+                <a id="home" class="nav-item nav-link" href="/">Projects</a>
+                <a id="home" class="nav-item nav-link" href="/">Life</a>
+                <a id="home" class="nav-item nav-link" href="/">Categories</a>
+                <a id="home" class="nav-item nav-link" href="/">FAQs</a>
                 <a id="login" class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
               {% endif %}
             </div>
@@ -67,26 +80,49 @@
       <!-- </div> -->
     <!-- </main> -->
 
-    <hr>
-    
-    <main role="main" class="container">
-      <div class="row">
-        <div class="col-md-4", id = 'bottom-1'>
-          <p class = "bottom-title">Site Map</p>
-          <p><a class = "bottom-a" href = "/">Home</a></p>
-          <p><a class = "bottom-a" href = "{{ url_for('about') }}">About</a></p>
-          <p><a class = "bottom-a" href="{{ url_for('posts') }}">Posts</a></p>
+    <hr id = "bottom-hr">
+    <footer class="footer">
+        <div id="bottom-sec" class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="footer-logo is-block mb-2"><img src="{{ url_for('static', filename='images/logo.png') }}" width=20%></a>
+                    <p class="is-size-7"><span>©2022 Quansfolio</span></p>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-9"><p class = "bottom-title">Site Map</p></div>
+                        <div class="col-md-3"><p class = "bottom-title">Contact</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-house-user"></i> Home</a></p>
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-file"></i>  Curriculum</a></p>
+                          <p><a class = "bottom-a" href="{{ url_for('posts') }}"><i class="fa-solid fa-blog"></i> Posts</a></p>
+                        </div>
+                        <div class="col-md-3">
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-bars-progress"></i> Project</a></p>
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-umbrella-beach"></i> Life</a></p>
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-tags"></i> Categories</a></p>
+                        </div>
+                        <div class="col-md-3">
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-circle-question"></i> FAQs</a></p>
+                        </div>
+                        <div class="col-md-3">
+                          <p>
+                              <a class="level-item button is-transparent is-marginless contact-icon bottom-a" href="https://github.com/qy2205" rel="noopener" target="_blank" title="Github"><i class="fab fa-github"></i> Github</a>
+                          </p>
+                          <p>
+                              <a class="level-item button is-transparent is-marginless contact-icon bottom-a" href="https://www.linkedin.com/in/qy2205/" rel="noopener" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                          </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style = "text-align:right;">
+                  <a class="navbar-brand mr-4" href="/" id = "bottom-logo">Quansfolio</a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4", id = 'bottom-2'>
-          <p class = "bottom-title">Stay Connected</p>
-          <p><a class = "bottom-a" href = "https://www.linkedin.com/in/qy2205/">LinkedIn</a></p>
-        </div>
-        <div class="col-md-4", id = 'bottom-3'>
-          <a class="navbar-brand mr-4" href="/" id = "bottom-logo">Quansfolio</a>
-        </div>
-      </div>
-    </main>
-
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -101,6 +137,7 @@
     <!-- mathjax -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://kit.fontawesome.com/fe23688026.js" crossorigin="anonymous"></script>
     <script>
       MathJax = {
         tex: {

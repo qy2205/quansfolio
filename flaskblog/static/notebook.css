@@ -53,6 +53,7 @@ div.input_area {
   border-radius: 2px;
   background: #000000;
   line-height: 1.21429em;
+  width: 95%;
 }
 /* This is needed so that empty prompt areas can collapse to zero height when there
    is no content in the output_subarea and the prompt. The main purpose of this is
@@ -560,4 +561,13 @@ div.output_javascript:empty {
 }
 .th {
   text-center: left;
+}
+
+.text_cell_render {
+    width: 95%;
+}
+
+img {
+  max-width:100%;
+  height:auto;
 }

@@ -4,23 +4,69 @@
 <main role="main" class="container">
   <div class="row">
 
-    <div class="col-md-12">
-      <div id="focus">
-        <ul>
-          {% for post in tag_posts %}
-            <li>
-              <img class = "home-image" src="{{ url_for('static', filename='images/home/' + post.id|string + '.jpg') }}" />
-              <div class= "slideother">
-                <div class="h12">{{ post.title }}</div>
-                <a href="{{ url_for('post', post_id=post.id) }}" class = "article-content">Read more ...</a>
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
+<!--    <div class="col-md-12">-->
+<!--      <div id="focus">-->
+<!--        <ul>-->
+<!--          {% for post in tag_posts %}-->
+<!--            <li>-->
+<!--              <img class = "home-image" src="{{ url_for('static', filename='images/home/' + post.id|string + '.jpg') }}" />-->
+<!--              <div class= "slideother">-->
+<!--                <div class="h12">{{ post.title }}</div>-->
+<!--                <a href="{{ url_for('post', post_id=post.id) }}" class = "article-content">Read more ...</a>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--          {% endfor %}-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="col-md-3">
+      <div class="content-section">
+        <div class="left-sidebar">
+          <div>
+              <img class="avatar" src="{{ url_for('static', filename='images/logo.png') }}" alt="Quan Yuan">
+              <p class="left-author">Quan Yuan</p>
+              <p class="author-tags">Artificial Intelligence
+                Machine Learning
+                Computer Science
+              </p>
+              <p class="location"><i class="fas fa-map-marker-alt mr-1"></i><span>New York, NY</span>
+            </p>
+          </div>
+
+          <div class="row left-summary-statistics">
+            <div class="col-md-4">
+              <p class="left-statistics-name">Posts</p><a class="number-hover" href="/"><p class="left-statistics-number">515</p></a>
+            </div>
+            <div class="col-md-4">
+              <p class="left-statistics-name">Categories</p><a class="number-hover" href="/"><p class="left-statistics-number">8</p></a>
+            </div>
+            <div class="col-md-4">
+              <p class="left-statistics-name">Tags</p><a class="number-hover" href="/"><p class="left-statistics-number">307</p></a>
+            </div>
+          </div>
+
+          <div class="contact-icons">
+            <a class="level-item button is-transparent is-marginless contact-icon" href="https://github.com/qy2205" rel="noopener" target="_blank" title="Github">
+              <i class="fab fa-github"></i> Github
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="level-item button is-transparent is-marginless contact-icon" href="https://www.linkedin.com/in/qy2205/" rel="noopener" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+  <!--          <a class="level-item button is-transparent is-marginless" href="https://twitter.com/matchaleimao" rel="noopener" target="_blank" title="Twitter">-->
+  <!--            <i class="fab fa-twitter"></i>-->
+  <!--          </a>-->
+  <!--          <a class="level-item button is-transparent is-marginless" href="" rel="noopener" target="_blank" title="Email">-->
+  <!--            <i class="fas fa-envelope-square"></i>-->
+  <!--          </a>-->
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-6">
       <div class = 'home-posts'>
         {% for post in posts %}
         <article class="media content-section">
@@ -44,7 +90,7 @@
                 {% endif  %}
               </p>
             </div>
-            
+
             <!-- <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2> -->
             {% if post.content_type == 'plain' %}
             <p class="article-content">{{ safe | striptags | truncate(400) }}</p>
@@ -59,7 +105,7 @@
       </div>
     </div>
 
-    <div class="col-md-4" id = 'sidebar'>
+    <div class="col-md-3" id = 'sidebar'>
       <div class="content-section">
         <p id = "sidebar-name">Categories</p>
         <ul class="list-group">
