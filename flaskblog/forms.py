@@ -62,14 +62,20 @@ class UpdateAccountForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
-    title = StringField('Title', validators = [DataRequired()])
-    tag = StringField('Tag', validators = [DataRequired()])
+    title = StringField('Title', validators=[DataRequired()])
+    tag = StringField('Tag', validators=[DataRequired()])
     tag2 = StringField('Second Tag')
     tag3 = StringField('Third Tag')
-    content_type = RadioField('Content type', validators = [DataRequired()],
-                              choices = [('plain', 'Plain Text'), ('html', 'HTML'), 
-                                         ('markdown', 'Markdown')])
-    content = TextAreaField('Content', validators = [DataRequired()])
+    category = StringField('Category')
+    content_type = RadioField(
+        'Content type', validators=[DataRequired()],
+        choices=[
+          ('plain', 'Plain Text'),
+          ('html', 'HTML'),
+          ('markdown', 'Markdown')
+        ]
+    )
+    content = TextAreaField('Content', validators=[DataRequired()])
     submit = SubmitField('Post')
 
 

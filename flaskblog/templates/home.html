@@ -67,6 +67,14 @@
     </div>
 
     <div class="col-md-6">
+      <form method="GET" action="">
+          <div class="input-group mb-3">
+            <div class="input-group mb-3">
+                <input type="text" name="keyword" id="keyword" class="form-control" placeholder="Search keywords" aria-label="Search keywords" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+              </div>
+          </div>
+      </form>
       <div class = 'home-posts'>
         {% for post in posts %}
         <article class="media content-section">
@@ -83,10 +91,10 @@
                 &nbsp;
                 <small class="text-muted">{{ post.tag }}</small>
                 {% if post.tag2 %}
-                <small class="text-muted">{{ post.tag2 }} </small>
+                <small class="text-muted">| {{ post.tag2 }}</small>
                 {% endif  %}
                 {% if post.tag3 %}
-                <small class="text-muted">{{ post.tag3 }}</small>
+                <small class="text-muted">| {{ post.tag3 }}</small>
                 {% endif  %}
               </p>
             </div>
@@ -107,10 +115,17 @@
 
     <div class="col-md-3" id = 'sidebar'>
       <div class="content-section">
-        <p id = "sidebar-name">Categories</p>
+        <p id = "sidebar-name">Tags</p>
         <ul class="list-group">
         {% for tag in unique_tags %}
             <a href="{{ url_for('tag_page', tags = tag) }}" class = 'cat-a'>{{ tag }}</a>
+        {% endfor %}
+        </ul>
+        <hr>
+        <p id = "sidebar-name">Categories</p>
+        <ul class="list-group">
+        {% for cat in unique_cats %}
+          <a class="cat-a" href="/">{{ cat }}</a>
         {% endfor %}
         </ul>
         <hr>
@@ -122,7 +137,6 @@
         </ul>
       </div>
     </div>
-
   </div>
 </main>
 

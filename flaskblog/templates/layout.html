@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500&family=PT+Serif&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500&family=PT+Sans+Narrow:wght@700&family=PT+Serif&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='colorful.css') }}">
@@ -52,6 +53,7 @@
                 <a id="home" class="nav-item nav-link" href="{{ url_for('posts') }}">Posts</a>
                 <a id="home" class="nav-item nav-link" href="/">Projects</a>
                 <a id="home" class="nav-item nav-link" href="/">Life</a>
+                <a id="home" class="nav-item nav-link" href="/">Tags</a>
                 <a id="home" class="nav-item nav-link" href="/">Categories</a>
                 <a id="home" class="nav-item nav-link" href="/">FAQs</a>
                 <a id="new-post" class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
@@ -63,6 +65,7 @@
                 <a id="home" class="nav-item nav-link" href="{{ url_for('posts') }}">Posts</a>
                 <a id="home" class="nav-item nav-link" href="/">Projects</a>
                 <a id="home" class="nav-item nav-link" href="/">Life</a>
+                <a id="home" class="nav-item nav-link" href="/">Tags</a>
                 <a id="home" class="nav-item nav-link" href="/">Categories</a>
                 <a id="home" class="nav-item nav-link" href="/">FAQs</a>
                 <a id="login" class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
@@ -101,10 +104,11 @@
                         </div>
                         <div class="col-md-3">
                           <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-bars-progress"></i> Project</a></p>
-                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-umbrella-beach"></i> Life</a></p>
-                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-tags"></i> Categories</a></p>
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-tags"></i> Tags</a></p>
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-layer-group"></i> Categories</a></p>
                         </div>
                         <div class="col-md-3">
+                          <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-umbrella-beach"></i> Life</a></p>
                           <p><a class = "bottom-a" href = "/"><i class="fa-solid fa-circle-question"></i> FAQs</a></p>
                         </div>
                         <div class="col-md-3">

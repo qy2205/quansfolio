@@ -2,19 +2,58 @@
 {% block content %}
 <main role="main" class="container">
     <div class="row">
-        <div class="col-md-12">
-            <p class = "aboutme-title">About Me</p>
-            <p class = "aboutme-content">
-                Machine Learning Engineer at Spotify; M.A. in Statistics at Columbia University; Machine Learning Engineer; Data Scientist; Quantitative Analyst;
+        <div class="col-md-3">
+            <div class="content-section">
+              <div class="left-sidebar">
+                <div>
+                    <img class="avatar" src="{{ url_for('static', filename='images/logo.png') }}" alt="Quan Yuan">
+                    <p class="left-author">Quan Yuan</p>
+                    <p class="author-tags">Artificial Intelligence
+                      Machine Learning
+                      Computer Science
+                    </p>
+                    <p class="location"><i class="fas fa-map-marker-alt mr-1"></i><span>New York, NY</span>
+                  </p>
+                </div>
+      
+                <div class="row left-summary-statistics">
+                  <div class="col-md-4">
+                    <p class="left-statistics-name">Posts</p><a class="number-hover" href="/"><p class="left-statistics-number">515</p></a>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="left-statistics-name">Categories</p><a class="number-hover" href="/"><p class="left-statistics-number">8</p></a>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="left-statistics-name">Tags</p><a class="number-hover" href="/"><p class="left-statistics-number">307</p></a>
+                  </div>
+                </div>
+      
+                <div class="contact-icons">
+                  <a class="level-item button is-transparent is-marginless contact-icon" href="https://github.com/qy2205" rel="noopener" target="_blank" title="Github">
+                    <i class="fab fa-github"></i> Github
+                  </a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a class="level-item button is-transparent is-marginless contact-icon" href="https://www.linkedin.com/in/qy2205/" rel="noopener" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                  </a>
+        <!--          <a class="level-item button is-transparent is-marginless" href="https://twitter.com/matchaleimao" rel="noopener" target="_blank" title="Twitter">-->
+        <!--            <i class="fab fa-twitter"></i>-->
+        <!--          </a>-->
+        <!--          <a class="level-item button is-transparent is-marginless" href="" rel="noopener" target="_blank" title="Email">-->
+        <!--            <i class="fas fa-envelope-square"></i>-->
+        <!--          </a>-->
+                </div>
+              </div>
+            </div>
+        </div>
 
-                SKILLS:
-                ▪️ Programming: Python (5-year+), SQL (4-year+); R, MATLAB, Java, C/C++; JavaScript, HTML, CSS
-                ▪️ Data & Modeling Tools: Pandas, NumPy, Numba, Dask, PySpark; Sklearn, PyTorch, TensorFlow, Transformers, Spacy, Gensim, CoreNLP, LightFM; SciPy, Optuna, CVXPY, Ray;
-                ▪️ Web development & Engineering Tools: Django, Flask; Docker; Plotly, Dash; Tabula, BeautifulSoup, Selenium;
-                ▪️ Big Data & Cloud: HDFS, Hive, Spark; AWS (EC2, S3, RDS, DynamoDB, Lambda, Sagemaker, Elastic Beanstalk);
-                ▪️ Database; SQL Server, MongoDB, Neo4j;
-                
-                Personal: quanyuan821@gmail.com
+        <div class="col-md-9 aboutme">
+            <p class = "aboutme-title">Curriculum Vitae</p>
+            <p class = "aboutme-content">
+                <p class = "aboutme-headline">Education</p>
+                <p class = "aboutme-headline2">Columbia University at City of New York (September, 2018 - December, 2019)</p>
+                <p class = "aboutme-headline2">Gatech</p>
+                <p class = "aboutme-headline2">Shanghai University</p>
             </p>
         </div>
     </div>

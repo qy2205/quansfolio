@@ -8,14 +8,25 @@ from flaskblog.models import User, Post, Comment
 from flask_login import login_user, current_user, logout_user, login_required
 from sqlalchemy import or_
 
+
 @app.route("/")
 def home():
     tag_posts = Post.query.filter((Post.tag == 'home') | (Post.tag == 'Home'))
+    # unique tag
     unique_tags = Post.query.with_entities(Post.tag).distinct()
     unique_tags = [each[0] for each in unique_tags]
-    posts = Post.query.order_by(Post.date_posted.desc()).limit(5).all()
-    recent_posts = Post.query.order_by(Post.date_posted.desc()).limit(7).all()
-    return render_template('home.html', tag_posts = tag_posts, unique_tags = unique_tags, posts = posts, recent_posts = recent_posts)
+    # unique category
+    unique_cats = Post.query.with_entities(Post.category).distinct()
+    unique_cats = [each[0] for each in unique_cats]
+    if 'keyword' in request.args:
+        keyword = request.args['keyword']
+        # search the posts using the keyword
+        posts = Post.query.filter(Post.title.like(f'%{keyword}%')).order_by(Post.date_posted.desc()).all()
+    else:
+        posts = Post.query.order_by(Post.date_posted.desc()).limit(10).all()
+    recent_posts = Post.query.order_by(Post.date_posted.desc()).limit(10).all()
+    return render_template('home.html', tag_posts=tag_posts, unique_tags=unique_tags, posts=posts, recent_posts=recent_posts, unique_cats=unique_cats)
+
 
 @app.route("/posts")
 def posts():
@@ -27,9 +38,14 @@ def posts():
     else:
         posts = Post.query.order_by(Post.date_posted.desc()).all()
         app.logger.debug(f'index without searching returned {len(posts)} posts')
+    # unique tags
     unique_tags = sorted(list(set([each.tag for each in posts])))
     recent_posts = Post.query.order_by(Post.date_posted.desc()).limit(7).all()
-    return render_template('posts.html', posts = posts, unique_tags = unique_tags, recent_posts = recent_posts)
+    # unique category
+    unique_cats = Post.query.with_entities(Post.category).distinct()
+    unique_cats = [each[0] for each in unique_cats]
+    return render_template('posts.html', posts=posts, unique_tags=unique_tags, recent_posts=recent_posts, unique_cats=unique_cats)
+
 
 @app.route("/category/<tags>")
 def tag_page(tags):
@@ -37,6 +53,7 @@ def tag_page(tags):
     unique_tags = Post.query.with_entities(Post.tag).distinct()
     unique_tags = [each[0] for each in unique_tags]
     return render_template('tagPage.html', tag_posts = tag_posts, unique_tags = unique_tags)
+
 
 @app.route("/about")
 def about():
@@ -157,13 +174,14 @@ def account():
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
-        created_post = Post(title = form.title.data,
-                            tag = form.tag.data,
-                            tag2 = form.tag2.data,
-                            tag3 = form.tag3.data,
-                            content_type = form.content_type.data,
-                            content = form.content.data,
-                            author = current_user)
+        created_post = Post(title=form.title.data,
+                            tag=form.tag.data,
+                            tag2=form.tag2.data,
+                            tag3=form.tag3.data,
+                            category=form.category.data,
+                            content_type=form.content_type.data,
+                            content=form.content.data,
+                            author=current_user)
         db.session.add(created_post)
         try:
             db.session.commit()
@@ -201,13 +219,23 @@ def post(post_id):
                 flash('There was an error while creating your comment. Try again later.', 'danger')
         else:
             flash('You are not logged in. You need to be logged in to be able to comment!', 'danger')
+    # unique tags
     unique_tags = Post.query.with_entities(Post.tag).distinct()
     unique_tags = [each[0] for each in unique_tags]
-    return render_template('post.html',
-                           title = current_post.title,
-                           post = current_post,
-                           form = form,
-                           unique_tags = unique_tags)
+    # unique category
+    unique_cats = Post.query.with_entities(Post.category).distinct()
+    unique_cats = [each[0] for each in unique_cats]
+    # recent posts
+    recent_posts = Post.query.order_by(Post.date_posted.desc()).limit(10).all()
+    return render_template(
+        'post.html',
+        title=current_post.title,
+        post=current_post,
+        form=form,
+        unique_tags=unique_tags,
+        unique_cats=unique_cats,
+        recent_posts=recent_posts,
+    )
 
 
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])

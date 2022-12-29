@@ -68,6 +68,20 @@
                         </div>
 
                         <div class="form-group">
+                            {{ form.category.label(class="form-control-label") }}
+                            {% if form.category.errors %}
+                                {{ form.category(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.category.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.category(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group">
                             {{ form.content_type.label(class="form-control-label") }}
                             {% if form.content_type.errors %}
                                 {{ form.content_type(class="form-control form-control-lg is-invalid") }}

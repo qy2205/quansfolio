@@ -32,12 +32,13 @@ class Post(db.Model):
 
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     author = db.relationship(User, backref=db.backref('posts', lazy=True))
+    category = db.Column(db.String(100), nullable=False)
     tag = db.Column(db.String(100), nullable=False)
     tag2 = db.Column(db.String(100), nullable=False)
     tag3 = db.Column(db.String(100), nullable=False)
     
     def __repr__(self):
-        return f"<Post(id='{self.id}', user_id='{self.user_id}', title='{self.title}', date_posted='{self.date_posted}', tag='{self.tag}'， tag2='{self.tag2}'， tag3='{self.tag3}')>"
+        return f"<Post(id='{self.id}', user_id='{self.user_id}', title='{self.title}', date_posted='{self.date_posted}', tag='{self.tag}'， tag2='{self.tag2}'， tag3='{self.tag3}', category='{self.category}')>"
 
 
 class Comment(db.Model):
