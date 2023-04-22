@@ -8,61 +8,39 @@ from flaskext.markdown import Markdown
 from sqlalchemy import event
 from flask_simplemde import SimpleMDE
 
-# configuring the logging
-# for more info, check:
-# https://docs.python.org/3.8/howto/logging.html
-# https://docs.python.org/3/library/logging.html
-dictConfig({
-    'version': 1,
-    'formatters': {'default': {
-        'format': '[%(asctime)s] [%(levelname)s] [%(name)s] [%(module)s:%(lineno)s] - %(message)s',
-    }},
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'default'
-        },
-        'to_file': {
-                'level': 'DEBUG',
-                'formatter': 'default',
-                'class': 'logging.handlers.RotatingFileHandler',
-                'filename': 'messages.log',
-                'maxBytes': 5000000,
-                'backupCount': 10
-            },
-    },
-    'root': {
-        'level': 'DEBUG',  # TODO: select here the level of logging that you want
-        'handlers': ['console', 'to_file']
-    }
-})
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'  # change and create your own key
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+def create_app(test_config=None):
+    app = Flask(__name__)
+    app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'  # change and create your own key
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Markdown editor
-app.config['SIMPLEMDE_JS_IIFE'] = True
-app.config['SIMPLEMDE_USE_CDN'] = True
-SimpleMDE(app)
+    # Markdown editor
+    app.config['SIMPLEMDE_JS_IIFE'] = True
+    app.config['SIMPLEMDE_USE_CDN'] = True
 
-# see more at: https://flask.palletsprojects.com/en/1.1.x/config/#SEND_FILE_MAX_AGE_DEFAULT
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # option to be used during the development phase, prevents caching
+    # see more at: https://flask.palletsprojects.com/en/1.1.x/config/#SEND_FILE_MAX_AGE_DEFAULT
+    app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # option to be used during the development phase, prevents caching
 
-app.config['SQLALCHEMY_ECHO'] = False  # option for debugging -- should be set to False for production
-
-# this line is to be used if you are considering uploading large files
-# app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+    app.config['SQLALCHEMY_ECHO'] = False  # option for debugging -- should be set to False for production
+    return app
 
 
-# this function activates stricter handling foreign keys
-def _fk_pragma_on_connect(db_api_con, con_record):
-    db_api_con.execute('pragma foreign_keys=ON')
+# create app
+app = create_app()
 
-
+# database
 db = SQLAlchemy(app)
-event.listen(db.engine, 'connect', _fk_pragma_on_connect)
+
+# login manager
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+login_manager.login_message_category = 'info'
+
+# others
+bcrypt = Bcrypt(app)
+Markdown(app)
+SimpleMDE(app)
 
 
 # this function makes the web service api to be accessible only for the requests with valid tokens
@@ -106,11 +84,4 @@ def add_header(r):
     return r
 
 
-bcrypt = Bcrypt(app)
-Markdown(app)
-login_manager = LoginManager(app)
-login_manager.login_view = 'login'
-login_manager.login_message_category = 'info'
-
 from flaskblog import routes
-from flaskblog import routesapi  # option that loads the routesapi file containing the web service implementation
